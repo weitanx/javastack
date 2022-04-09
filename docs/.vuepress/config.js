@@ -13,7 +13,7 @@ module.exports = {
     // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: 'vuepress,theme,blog,vdoing' }],
-    ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ['meta', { name: 'theme-color', content: '#11a8cd' }] // 移动浏览器主题颜色
   ],
 
   // 主题配置
@@ -28,8 +28,8 @@ module.exports = {
           { text: 'Java构建', link: '/02.Java软件/01.Java构建/' },
           { text: 'Java IDE', link: '/02.Java软件/02.JavaIDE/' },
           { text: 'Java服务器', link: '/02.Java软件/03.Java服务器/' },
-          { text: 'Java监控诊断', link: '/02.Java软件/04.Java监控诊断/' },
-        ],
+          { text: 'Java监控诊断', link: '/02.Java软件/04.Java监控诊断/' }
+        ]
       },
       {
         text: 'Java工具',
@@ -39,8 +39,8 @@ module.exports = {
           { text: 'JavaBean工具', link: '/03.Java工具/02.JavaBean工具/' },
           { text: 'Java模板引擎', link: '/03.Java工具/03.Java模板引擎/' },
           { text: 'Java测试工具', link: '/03.Java工具/04.Java测试工具/' },
-          { text: '其他', link: '/03.Java工具/05.其他Java工具/' },
-        ],
+          { text: '其他', link: '/03.Java工具/05.其他Java工具/' }
+        ]
       },
       { text: 'Java框架', link: '/04.Java框架/' },
       { text: 'Java中间件', link: '/05.Java中间件/' },
@@ -49,9 +49,9 @@ module.exports = {
         ariaLabel: 'Java',
         items: [
           { text: 'Java 教程 📚', link: 'https://dunwu.github.io/java-tutorial/', target: '_blank' },
-          { text: 'JavaCore 教程 📚', link: 'https://dunwu.github.io/javacore/', target: '_blank' },
-        ],
-      },
+          { text: 'JavaCore 教程 📚', link: 'https://dunwu.github.io/javacore/', target: '_blank' }
+        ]
+      }
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: 'https://raw.githubusercontent.com/dunwu/images/dev/common/dunwu-logo-200.png', // 导航栏logo
@@ -69,7 +69,7 @@ module.exports = {
     // sidebarOpen: false, // 初始状态是否打开侧边栏，默认true
     updateBar: {
       // 最近更新栏
-      showToArticle: false, // 显示到文章页底部，默认true
+      showToArticle: false // 显示到文章页底部，默认true
       // moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
     },
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -89,12 +89,12 @@ module.exports = {
 
     category: false, // 是否打开分类功能，默认true。 如打开，会做的事情有：1. 自动生成的frontmatter包含分类字段 2.页面中显示与分类相关的信息和模块 3.自动生成分类页面（在@pages文件夹）。如关闭，则反之。
     tag: false, // 是否打开标签功能，默认true。 如打开，会做的事情有：1. 自动生成的frontmatter包含标签字段 2.页面中显示与标签相关的信息和模块 3.自动生成标签页面（在@pages文件夹）。如关闭，则反之。
-    archive: false, // 是否打开归档功能，默认true。 如打开，会做的事情有：1.自动生成归档页面（在@pages文件夹）。如关闭，则反之。
+    archive: true, // 是否打开归档功能，默认true。 如打开，会做的事情有：1.自动生成归档页面（在@pages文件夹）。如关闭，则反之。
 
     author: {
       // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, href: String}
       name: 'dunwu', // 必需
-      href: 'https://github.com/dunwu', // 可选的
+      href: 'https://github.com/dunwu' // 可选的
     },
     social: {
       // 社交图标，显示于博主信息栏和页脚栏
@@ -103,21 +103,21 @@ module.exports = {
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:forbreak@163.com',
+          link: 'mailto:forbreak@163.com'
         },
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/dunwu',
-        },
-      ],
+          link: 'https://github.com/dunwu'
+        }
+      ]
     },
     footer: {
       // 页脚信息
       createYear: 2019, // 博客创建年份
-      copyrightInfo: '钝悟（dunwu） | MIT License', // 博客版权信息，支持a标签
+      copyrightInfo: '钝悟（dunwu） | MIT License' // 博客版权信息，支持a标签
     },
-    htmlModules,
+    htmlModules
   },
 
   // 插件
@@ -150,8 +150,8 @@ module.exports = {
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
       {
-        hm: baiduCode || '01293bffa6c3962016c08ba685c79d78',
-      },
+        hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
+      }
     ],
 
     [
@@ -161,8 +161,8 @@ module.exports = {
         copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
         copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
-        showInMobile: false, // whether to display on the mobile side, default: false.
-      },
+        showInMobile: false // whether to display on the mobile side, default: false.
+      }
     ],
     [
       'demo-block',
@@ -174,18 +174,18 @@ module.exports = {
           // vue: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
           jsfiddle: false, // 是否显示 jsfiddle 链接
           codepen: true, // 是否显示 codepen 链接
-          horizontal: false, // 是否展示为横向样式
-        },
-      },
+          horizontal: false // 是否展示为横向样式
+        }
+      }
     ],
     [
       'vuepress-plugin-zooming', // 放大图片
       {
         selector: '.theme-vdoing-content img:not(.no-zoom)',
         options: {
-          bgColor: 'rgba(0,0,0,0.6)',
-        },
-      },
+          bgColor: 'rgba(0,0,0,0.6)'
+        }
+      }
     ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
@@ -193,16 +193,16 @@ module.exports = {
         transformer: (timestamp, lang) => {
           const dayjs = require('dayjs') // https://day.js.org/
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
-        },
-      },
-    ],
+        }
+      }
+    ]
   ],
 
   markdown: {
     // lineNumbers: true,
-    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'] // 提取标题到侧边栏的级别，默认['h2', 'h3']
   },
 
   // 监听文件变化并重新构建
-  extraWatchFiles: ['.vuepress/config.js', '.vuepress/config/htmlModules.js'],
+  extraWatchFiles: ['.vuepress/config.js', '.vuepress/config/htmlModules.js']
 }
